@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Event-Planner-API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B6AE3EE3-C4C8-4D1F-8321-16D54CD867CD}|WebApplication1\\WebApplication1.csproj|c:\\event-planner-api\\webapplication1\\controllers\\webcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6AE3EE3-C4C8-4D1F-8321-16D54CD867CD}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\webcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6AE3EE3-C4C8-4D1F-8321-16D54CD867CD}|WebApplication1\\WebApplication1.csproj|c:\\event-planner-api\\webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6AE3EE3-C4C8-4D1F-8321-16D54CD867CD}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WebController.cs",
+              "DocumentMoniker": "C:\\Event-Planner-API\\WebApplication1\\Controllers\\WebController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\WebController.cs",
+              "ToolTip": "C:\\Event-Planner-API\\WebApplication1\\Controllers\\WebController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\WebController.cs",
+              "ViewState": "AQIAAG8BAAAAAAAAAAAmwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-19T18:06:27.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Event-Planner-API\\WebApplication1\\Program.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Program.cs",
+              "ToolTip": "C:\\Event-Planner-API\\WebApplication1\\Program.cs",
+              "RelativeToolTip": "WebApplication1\\Program.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAMwB4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-19T21:01:14.551Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

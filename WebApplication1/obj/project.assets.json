@@ -1123,11 +1123,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\SMC project\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+      "projectUniqueName": "C:\\Event-Planner-API\\WebApplication1\\WebApplication1.csproj",
       "projectName": "WebApplication1",
-      "projectPath": "C:\\SMC project\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+      "projectPath": "C:\\Event-Planner-API\\WebApplication1\\WebApplication1.csproj",
       "packagesPath": "C:\\Users\\ninja\\.nuget\\packages\\",
-      "outputPath": "C:\\SMC project\\WebApplication1\\WebApplication1\\obj\\",
+      "outputPath": "C:\\Event-Planner-API\\WebApplication1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ninja\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "X4xrtps3ZZXqk+p4eZUvY3Y++D3eJjooMiPMvuwtpRMlNhzxOBUFiMpx3vsS3z8W9e3x7cUqEaruFGOCw5og4Q==",
+  "dgSpecHash": "wpiE/L1oO9u3okrMDey4TMmPOj7/WdWtptQzr5QKF2xQAKzs4pg7K8mxtHDGjvUHYwgAOavdNQtYOTttG8UZ1A==",
   "success": true,
-  "projectFilePath": "C:\\SMC project\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+  "projectFilePath": "C:\\Event-Planner-API\\WebApplication1\\WebApplication1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ninja\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\8.0.4\\microsoft.aspnetcore.jsonpatch.8.0.4.nupkg.sha512",
     "C:\\Users\\ninja\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\8.0.4\\microsoft.aspnetcore.mvc.newtonsoftjson.8.0.4.nupkg.sha512",

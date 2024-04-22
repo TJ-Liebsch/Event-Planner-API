@@ -188,9 +188,9 @@ namespace WebApplication1.Controllers
 
         [HttpPost]
         [Route("AddCustomer")]
-        public JsonResult AddCustomer([FromForm] string fname, [FromForm] string lname, [FromForm] string email, [FromForm] string address, [FromForm] string city, [FromForm] string state, [FromForm] int zip, [FromForm] string phone)
+        public JsonResult AddCustomer([FromForm] string fname, [FromForm] string lname, [FromForm] string email, [FromForm] string address, [FromForm] string city, [FromForm] string state, [FromForm] int zip, [FromForm] string phone, [FromForm] string partyType)
         {
-            string query = "insert into dbo.Customer values(@fname, @lname, @email, @address, @city, @state, @zip, @phone)";
+            string query = "insert into dbo.Customer values(@fname, @lname, @email, @address, @city, @state, @zip, @phone, @partyType)";
             DataTable table = new DataTable();
             string sqlDatasource = _configuration.GetConnectionString("SMC_Booking_DatabaseCon");
             SqlDataReader myReader;
@@ -207,6 +207,7 @@ namespace WebApplication1.Controllers
                     myCommand.Parameters.AddWithValue("@state", state);
                     myCommand.Parameters.AddWithValue("@zip", zip);
                     myCommand.Parameters.AddWithValue("@phone", phone);
+                    myCommand.Parameters.AddWithValue("@partyType", partyType);
                     myReader = myCommand.ExecuteReader();
                     table.Load(myReader);
                     myReader.Close();
@@ -219,9 +220,9 @@ namespace WebApplication1.Controllers
 
         [HttpPost]
         [Route("AddHost")]
-        public JsonResult AddHost(int id, string fname, string lname)
+        public JsonResult AddHost([FromForm] string fname, [FromForm] string lname)
         {
-            string query = "insert into dbo.Host values(@id, @fname, @lname)";
+            string query = "insert into dbo.Host values(@fname, @lname)";
             DataTable table = new DataTable();
             string sqlDatasource = _configuration.GetConnectionString("SMC_Booking_DatabaseCon");
             SqlDataReader myReader;
@@ -230,7 +231,7 @@ namespace WebApplication1.Controllers
                 myCon.Open();
                 using (SqlCommand myCommand = new SqlCommand(query, myCon))
                 {
-                    myCommand.Parameters.AddWithValue("@id", id);
+                    //myCommand.Parameters.AddWithValue("@id", id);
                     myCommand.Parameters.AddWithValue("@fname", fname);
                     myCommand.Parameters.AddWithValue("@lname", lname);
                     myReader = myCommand.ExecuteReader();
@@ -328,7 +329,7 @@ namespace WebApplication1.Controllers
 
         [HttpPost]
         [Route("AddQuestionnaireAnswers")]
-        public JsonResult AddQuestionnaireAnswers(int customerID, int questionID, string response)
+        public JsonResult AddQuestionnaireAnswers([FromForm] int customerID, [FromForm] int questionID, [FromForm] string response)
         {
             string query = "insert into dbo.Questionnaire_answers values(@cID, @qID, @response)";
             DataTable table = new DataTable();
@@ -350,6 +351,73 @@ namespace WebApplication1.Controllers
             }
 
             return new JsonResult("Added Successfully");
+        }
+
+        [HttpGet]
+        [Route("GetGreaterGenericParty")]
+        public JsonResult GetGreaterGenericParty()
+        {
+            string query = "SELECT * FROM dbo.Generic_party WHERE (date >= '2024-04-23 12:42:06.001')";
+            DataTable table = new DataTable();
+            string sqlDatasource = _configuration.GetConnectionString("SMC_Booking_DatabaseCon");
+            SqlDataReader myReader;
+            using (SqlConnection myCon = new SqlConnection(sqlDatasource))
+            {
+                myCon.Open();
+                using (SqlCommand myCommand = new SqlCommand(query, myCon))
+                {
+                    myReader = myCommand.ExecuteReader();
+                    table.Load(myReader);
+                    myReader.Close();
+                    myCon.Close();
+                }
+            }
+
+            return new JsonResult(table);
+        }
+        [HttpGet]
+        [Route("GetLesserGenericParty")]
+        public JsonResult GetLesserGenericParty()
+        {
+            string query = "SELECT * FROM dbo.Generic_party WHERE (date <= '2024-04-23 12:42:06.001')";
+            DataTable table = new DataTable();
+            string sqlDatasource = _configuration.GetConnectionString("SMC_Booking_DatabaseCon");
+            SqlDataReader myReader;
+            using (SqlConnection myCon = new SqlConnection(sqlDatasource))
+            {
+                myCon.Open();
+                using (SqlCommand myCommand = new SqlCommand(query, myCon))
+                {
+                    myReader = myCommand.ExecuteReader();
+                    table.Load(myReader);
+                    myReader.Close();
+                    myCon.Close();
+                }
+            }
+
+            return new JsonResult(table);
+        }
+        [HttpGet]
+        [Route("GetGenericParty")]
+        public JsonResult GetGenericParty()
+        {
+            string query = "SELECT * FROM dbo.Generic_party WHERE Party_name = 'Pauls Party'";
+            DataTable table = new DataTable();
+            string sqlDatasource = _configuration.GetConnectionString("SMC_Booking_DatabaseCon");
+            SqlDataReader myReader;
+            using (SqlConnection myCon = new SqlConnection(sqlDatasource))
+            {
+                myCon.Open();
+                using (SqlCommand myCommand = new SqlCommand(query, myCon))
+                {
+                    myReader = myCommand.ExecuteReader();
+                    table.Load(myReader);
+                    myReader.Close();
+                    myCon.Close();
+                }
+            }
+
+            return new JsonResult(table);
         }
 
         [HttpDelete]
